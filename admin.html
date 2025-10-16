@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin</title>
+    <link rel="stylesheet" href="./style-admin.css" />
+  </head>
+  <body>
+    <h1>Quản trị người dùng</h1>
+    <button class="logout">Đăng xuất</button>
+
+    <h2>Thêm người dùng mới</h2>
+    <form class="adduser-form">
+      <input type="text" id="name" placeholder="Họ tên" required />
+      <input type="email" id="email" placeholder="Email" required />
+      <input type="text" id="role" placeholder="Vai trò" required />
+      <button type="submit">Thêm</button>
+    </form>
+    
+    <h2>Danh sách người dùng</h2>
+    <table id="user-table">
+      <thead>
+        <tr>
+          <th>Full name</th>
+          <th>Email</th>
+          <th>Role</th>
+          <th>Act</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+
+    <script src="script.js"></script>
+  </body>
+</html>
