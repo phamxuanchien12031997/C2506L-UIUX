@@ -11,8 +11,11 @@ if (loginForm) {
     if (email === "admin@example.com" && password === "123456") {
       localStorage.setItem("isLoggedIn", "true");
       window.location.href = "admin.html";
+    } else if (email === "user@example.com" && password === "123456") {
+      localStorage.setItem("isLoggedIn", "true");
+      window.location.href = "home.html";
     } else {
-      errorMsg.textContent = "Email hoặc mật khẩu không đúng!";
+      errorMsg.textContent = "Email hoặc mật khẩu không đúng !";
     }
   });
 }
@@ -20,6 +23,9 @@ if (loginForm) {
 if (window.location.pathname.includes("admin.html")) {
   if (localStorage.getItem("isLoggedIn") !== "true") {
     window.location.href = "login.html";
+  }
+  if (localStorage.getItem("isLoggedIn") !== "true") {
+    window.location.href = "home.html";
   }
 }
 
