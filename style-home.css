@@ -14,24 +14,72 @@
 .home-header img {
     width: 99.5vw;
     height: 300px;
-    border: 1px  solid black;
+    border: 1px solid black;
     box-shadow: 0 0 5px blue;
     border-radius: 10px;
 }
 
-#dg {
+#name {
     position: absolute;
     font-size: 100px;
     color: red;
-    bottom: 5px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     font-weight: bold;
     text-shadow: 0 0 10px yellow;
+    pointer-events: none;
 }
-.grid-cards{
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    margin: 30px ;
-    justify-content: center;
+
+#link {
+    position: absolute;
+    color: white;
+    font-size: 20px;
+    display: flex;
+    top: 10px;
+    left: 10px;
+    gap: 20px;
+}
+
+.cart-section {
+    position: absolute;
+    bottom: 10px;
+    font-size: 30px;
+    display: flex;
     align-items: center;
-    cursor: pointer;
+    justify-content: space-around;
+    flex-direction: row;
+    color: white;
+}
+
+.menu {
+    display: flex;
+    gap: 30px;
+}
+
+.menu-bar {
+    border-radius: 5px;
+    border: 1px solid black;;
+}
+   
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.grid-cards img {
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    body {
+        background-color: lightblue;
+    }
+}
+
+@media(max-width: 576px) {
+    body {
+        background-color: rgba(128, 128, 128, 0.999);
+    }
 }
